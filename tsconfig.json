@@ -1,0 +1,11 @@
+{
+  "extends": "@tsconfig/svelte/tsconfig.json",
+
+  "include": [ "Models/Pages/*", "Models/Pages/**/*", "Views/Shared/Components/**/*", "Views/Shared/Components/*" ],
+  "exclude": ["node_modules/*", "__sapper__/*", "public/*", "wwwroot/*", "bin/*", "obj/*", "Properties/*", ".vscode/*"],
+
+  "compilerOptions": {
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+  }
+}

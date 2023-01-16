@@ -1,0 +1,14 @@
+@page
+@using EPiServer.Web.Mvc.Html
+@model EpiSvelte.Models.Pages.PageModel
+@{
+    Layout = "~/Views/Shared/Layouts/_Layout.cshtml";
+}
+
+<h1>@Model.CurrentContent.Title</h1>
+@Html.PropertyFor(x => x.CurrentContent.Blocks)
+
+@section HeadSection {
+    <link href="~/build/homepage.css" asp-append-version="true" rel="stylesheet" />
+    <script defer src="~/build/homepage.js" asp-append-version="true"></script>
+}

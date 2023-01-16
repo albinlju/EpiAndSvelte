@@ -1,0 +1,6 @@
+@using EpiSvelte.Extensions;
+@model EpiSvelte.Models.Blocks.TabBlock;
+
+<div data-id="@(((IContent)Model).ContentLink.ID)"  id="tabBlock"></div>
+
+@{Html.AddJavaScript("/build/tabblock.js");}
