@@ -11,15 +11,21 @@ public class PageBase : PageData
         Order = 10)]
     public virtual string Title { get; set; }
 
+    [UIHint("Textarea")]
+    [Display(
+        GroupName = SystemTabNames.Content,
+        Order = 20)]
+    public virtual string Intro { get; set; }
+
     [UIHint("image")]
     [Display(
         GroupName = SystemTabNames.Content,
-        Order = 10)]
+        Order = 30)]
     public virtual ContentReference TopImage { get; set; }
 
     [Display(
         GroupName = SystemTabNames.Content,
-        Order = 20)]
+        Order = 40)]
     public virtual ContentArea Blocks { get; set; }
 
     [Display(
