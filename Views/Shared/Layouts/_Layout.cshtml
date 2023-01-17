@@ -12,9 +12,9 @@
      @Html.RenderJavaScripts()
      @Html.RenderStyles()
 </head>
-<body>
-    <div class="bg-zinc-900"> 
-        @await Component.InvokeAsync("Header")
+<body class="bg-zinc-900">
+    @await Component.InvokeAsync("Header")
+    <div class="container">
         @RenderBody()
     </div>
 </body>

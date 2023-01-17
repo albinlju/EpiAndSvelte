@@ -4,7 +4,7 @@ using EPiServer.ServiceLocation;
 using EpiSvelte.Interfaces.Backend;
 using EpiSvelte.Services.Backend;
 
-namespace EpiSvelte.Initialisation;
+namespace EpiSvelte.Initialization;
 
 [ModuleDependency(typeof(ServiceContainerInitialization))]
     public class RegisterServices : IConfigurableModule

@@ -5,7 +5,16 @@
     Layout = "~/Views/Shared/Layouts/_Layout.cshtml";
 }
 
-<h1>@Model.CurrentContent.Title</h1>
+<div class="rounded-lg shadow-md flex items-center">
+    <div class="flex-1">
+        <h1 class="text-6xl">@Model.CurrentContent.Title</h1>
+    </div>
+    <div class="flex-1">
+        <img src="@Url.ContentUrl(Model.CurrentContent.TopImage)">
+    </div>
+</div>
+
+
 @Html.PropertyFor(x => x.CurrentContent.Blocks)
 
 @section HeadSection {
