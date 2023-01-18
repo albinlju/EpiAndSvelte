@@ -1,4 +1,4 @@
-1. Run dotnet-episerver _create-cms-database EpiSvelte.csproj -S "Your SQL server name" -E 
+1. Run: dotnet-episerver create-cms-database EpiSvelte.csproj -S "Your SQL server name" -E 
 3. Connectionstring will automatically be created in appSetting.json 
 3. Create new appSettings.json as your machine name. Eg "appSettings.machineName.json", look in project to se other appSettings files to clarify.
 4. Copy appSettings.json connectionstring and move it to your newly created appSettings.machineName.json. 
