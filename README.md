@@ -3,8 +3,8 @@
 3. Create new appSettings.json as your machine name. Eg "appSettings.machineName.json", look in project to se other appSettings files to clarify.
 4. Copy appSettings.json connectionstring and move it to your newly created appSettings.machineName.json. 
 5. Now if you want you can remove appSettings.json connectionstring.
-6. Run npm install 
-7. Run dotnet run.
+6. Run: npm install 
+7. Run: dotnet run.
 8. Add admin user 
 9. Some pages will be created automatically 
 10. Create a webpage in admin panel and set homepage as root page for the webpage.
