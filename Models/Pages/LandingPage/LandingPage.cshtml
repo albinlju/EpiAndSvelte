@@ -5,5 +5,7 @@
     Layout = "~/Views/Shared/Layouts/_Layout.cshtml";
 }
 
-@Html.PropertyFor(x => x.CurrentContent.Title);
+
+<h1 class="text-4xl" @Html.EditAttributes(x => x.CurrentContent.Title)>@Model.CurrentContent.Title</h1>
+<p @Html.EditAttributes(x => x.CurrentContent.Intro)>@Model.CurrentContent.Intro</p>
 @Html.PropertyFor(x => x.CurrentContent.Blocks)

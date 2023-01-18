@@ -10,7 +10,7 @@ namespace EpiSvelte.Initialization
     [ModuleDependency(typeof(InitializationModule))]
     public class CreateInitializationContent : IInitializableModule
     {
-       
+
 
         public void Initialize(InitializationEngine context)
         {
@@ -35,13 +35,22 @@ namespace EpiSvelte.Initialization
                 repository.Save(homePage, EPiServer.DataAccess.SaveAction.Publish, AccessLevel.NoAccess);
 
                 //Landing pages
-                PageData aboutPage = repository.GetDefault<LandingPage>(homePage.ContentLink);
-                PageData servicesPage = repository.GetDefault<LandingPage>(homePage.ContentLink);
-                PageData projectPage = repository.GetDefault<LandingPage>(homePage.ContentLink);
+                LandingPage aboutPage = repository.GetDefault<LandingPage>(homePage.ContentLink);
+                LandingPage servicesPage = repository.GetDefault<LandingPage>(homePage.ContentLink);
+                LandingPage projectPage = repository.GetDefault<LandingPage>(homePage.ContentLink);
 
                 aboutPage.Name = "About page";
+                aboutPage.Title = "About";
+                aboutPage.Intro = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.";
+
                 servicesPage.Name = "Services";
+                servicesPage.Title = "Services";
+                servicesPage.Intro = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.";
+
                 projectPage.Name = "Projects";
+                projectPage.Title = "Projects";
+                projectPage.Intro = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.";
+
 
                 repository.Save(aboutPage, EPiServer.DataAccess.SaveAction.Publish, AccessLevel.NoAccess);
                 repository.Save(servicesPage, EPiServer.DataAccess.SaveAction.Publish, AccessLevel.NoAccess);
@@ -76,7 +85,7 @@ namespace EpiSvelte.Initialization
                 projectsMenuItem.MenuUrl = projectPage != null ? projectPage.LinkURL : homePage.LinkURL;
                 repository.Save(projectsMenuItem, EPiServer.DataAccess.SaveAction.Publish, AccessLevel.NoAccess);
             }
-           
+
         }
     }
 }
