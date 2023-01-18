@@ -5,7 +5,7 @@ public class Program
     public static IConfiguration Configuration { get; } =
            new ConfigurationBuilder()
            .AddJsonFile("appSettings.json", false, true)
-           .AddJsonFile($"appSettings.{Environment.MachineName}.json", true, true)                                                                                  .AddJsonFile($"appsettings.{Environment.MachineName}.json", true, true)
+           .AddJsonFile($"appSettings.{Environment.MachineName}.json", true, true)
            .AddEnvironmentVariables()
            .Build();
     

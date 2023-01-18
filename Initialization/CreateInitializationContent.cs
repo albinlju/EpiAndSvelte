@@ -28,8 +28,10 @@ namespace EpiSvelte.Initialization
             if (repository.GetChildren<HomePage>(root).FirstOrDefault() == null)
             {
                 //Homepage
-                PageData homePage = repository.GetDefault<HomePage>(root);
+                HomePage homePage = repository.GetDefault<HomePage>(root);
                 homePage.Name = "Home Page";
+                homePage.Title = "Let’s make your product a success";
+                homePage.Intro = "Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt amet fugiat veniam occaecat fugiat aliqua.";
                 repository.Save(homePage, EPiServer.DataAccess.SaveAction.Publish, AccessLevel.NoAccess);
 
                 //Landing pages
