@@ -1,39 +1,8 @@
-# Empty CMS template
+1. Run dotnet-episerver create-cms-database EpiSvelte.csproj -S "Your SQL server name" 
+2. Run dotnet run.
+3. Add admin user 
+4. Some pages will be created automatically 
+5. Create a webpage in admin panel and set homepage to as root page for the webpage.
 
-## How to run
-
-Chose one of the following options to get started. 
-
-### Windows
-
-Prerequisities
-- .NET SDK 6+
-- SQL Server 2016 Express LocalDB (or later)
-
-```bash
-$ dotnet run
-````
-
-### Any OS with Docker
-
-Prerequisities
-- Docker
-- Enable Docker support when applying the template
-
-```bash
-$ docker-compose up
-````
-
-> Note that this Docker setup is just configured for local development. Follow this [guide to enable HTTPS](https://github.com/dotnet/dotnet-docker/blob/main/samples/run-aspnetcore-https-development.md).
-
-### Any OS with external database server
-
-Prerequisities
-- .NET SDK 6+
-- SQL Server 2016 (or later) on a external server, e.g. Azure SQL
-
-Create an empty database on the external database server and update the connection string accordingly.
-
-```bash
-$ dotnet run
-````
+To develop in the project you can run dotnet watch run -s EpiSvelte.csproj in terminal. You can secondly "run npm run fe-watch-all" in another teminal window.
+Now we will listen pages block and svelte files and reload projekt for both backend and frontend changes.
