@@ -7,7 +7,7 @@
 7. Run: dotnet run.
 8. Add admin user 
 9. Some pages will be created automatically 
-10. Create a webpage in admin panel and set homepage as root page for the webpage.
+10. Create a webpage in admin panel with https://localhost:5000 as url and set homepage as root page for the webpage.
 
 To develop in the project you can run dotnet watch run -s EpiSvelte.csproj in terminal. You can secondly run "npm run fe-watch-all" in another teminal window.
 Now we will listen to changes in pages blocks and svelte files and reload projekt for both backend and frontend changes.
