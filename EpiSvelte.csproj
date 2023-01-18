@@ -25,8 +25,9 @@
 
   <Target Name="Tailwind" BeforeTargets="Build">
         <Exec Command="npm run fe-scss-build"/>
-    </Target>
-  
+  </Target>
+
+   
   <ItemGroup>
     <EmbeddedResource Include="Resources\Translations\**\*" />
   </ItemGroup>

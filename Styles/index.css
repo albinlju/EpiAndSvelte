@@ -5,3 +5,17 @@
 p,h1,h2,h3,h3,h4,h5,h6,a, li,span{
     @apply text-slate-100;
 }
+
+.imageGallery{
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    gap: 1rem; 
+    grid-template-areas: 
+        "area-1 area-1 area-2"
+        "area-1 area-1 area-3"; 
+}
+
+.area-1 { grid-area: area-1; }
+.area-2 { grid-area: area-2; }
+.area-3 { grid-area: area-3; }

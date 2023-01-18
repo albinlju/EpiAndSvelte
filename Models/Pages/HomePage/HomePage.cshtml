@@ -1,6 +1,6 @@
 @page
 @using EPiServer.Web.Mvc.Html
-@model EpiSvelte.Models.Pages.PageModel
+@model EpiSvelte.Models.Pages.HomePageModel
 @{
     Layout = "~/Views/Shared/Layouts/_Layout.cshtml";
 }
@@ -9,18 +9,21 @@
     <div class="flex-1 z-10">
         <h1 class="text-6xl font-bold">@Model.CurrentContent.Title</h1>
         <p class="mt-4">@Model.CurrentContent.Intro</p>
-        <a href="#" class="text-lg mt-4 text-zinc-800 inline-block cursor-pointer rounded-xl hover:text-zinc-200 py-3 px-5 transition ease-in-out duration-200 font-bold bg-slate-50 hover:bg-zinc-900">Let's get started!</a>
+        <a href="#"
+            class="text-lg mt-4 text-zinc-800 inline-block cursor-pointer rounded-xl hover:text-zinc-200 py-3 px-5 transition ease-in-out duration-200 font-bold bg-slate-50 hover:bg-zinc-900">Let's
+            get started!</a>
     </div>
     <div class="flex-1 z-10">
         <img class="rounded-3xl shadow" src="@Url.ContentUrl(Model.CurrentContent.TopImage)">
     </div>
-    <div style="background-image: -webkit-linear-gradient(30deg, rgb(39 39 42) 50%, rgb(23 23 23) 50%)" class="absolute z-0 w-100 h-full"></div>
+    <div style="background-image: -webkit-linear-gradient(30deg, rgb(39 39 42) 50%, rgb(23 23 23) 50%)"
+        class="absolute z-0 w-100 h-full"></div>
 </div>
 
 
 @Html.PropertyFor(x => x.CurrentContent.Blocks)
 
 @section HeadSection {
-    <link href="~/build/homepage.css" asp-append-version="true" rel="stylesheet" />
-    <script defer src="~/build/homepage.js" asp-append-version="true"></script>
+<link href="~/build/homepage.css" asp-append-version="true" rel="stylesheet" />
+<script defer src="~/build/homepage.js" asp-append-version="true"></script>
 }

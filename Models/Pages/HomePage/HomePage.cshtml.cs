@@ -5,7 +5,7 @@ using EpiSvelte.Model.ViewModels;
 
 namespace EpiSvelte.Models.Pages;
 
-public class PageModel : RazorPageModel<HomePage>, IPageViewModel<HomePage>
+public class HomePageModel : RazorPageModel<HomePage>, IPageViewModel<HomePage>
 {
     public HomePage CurrentPage => CurrentContent;
 

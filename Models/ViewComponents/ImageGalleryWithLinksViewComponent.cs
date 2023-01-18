@@ -4,9 +4,9 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace EpiSvelte.Models.ViewComponents;
 
-public class ImageGalleryWithLinksViewComponent : BlockComponent<ImageBlock>
+public class ImageGalleryWithLinksViewComponent : BlockComponent<ImageGalleryWithLinks>
 {
-    protected override IViewComponentResult InvokeComponent(ImageBlock currentBlock)
+    protected override IViewComponentResult InvokeComponent(ImageGalleryWithLinks currentBlock)
     {
         return View(currentBlock);
     }

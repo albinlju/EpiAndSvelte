@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import type { TabBlock } from "../../../../Interfaces/Frontend/Blocks";
   import { __epiDataService } from "../../../../Services/Frontend/EpiDataService";
+  import Spinner from "../../SvelteComponents/Spinner.svelte";
 
   const getData = async () => {
     const response = await __epiDataService.GetContentById<TabBlock>(
@@ -60,7 +61,7 @@
       >
     </li>
   </ul>
-  <div class="tab-content" id="tabs-tabContentFill">
+  <div class="tab-content mb-10" id="tabs-tabContentFill">
     {#if activeDescription == 1}
       <div
         class="tab-pane fade {activeDescription == 1 ? 'active show' : ''}"
@@ -93,6 +94,10 @@
         {@html data.tabOneDescription.value}
       </div>
     {/if}
+  </div>
+{:else}
+  <div class="flex justify-center items-center p-20">
+    <Spinner />
   </div>
 {/if}
 

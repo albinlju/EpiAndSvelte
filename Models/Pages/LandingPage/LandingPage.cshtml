@@ -1,0 +1,9 @@
+@page
+@using EPiServer.Web.Mvc.Html
+@model EpiSvelte.Models.Pages.LandingPageModel
+@{
+    Layout = "~/Views/Shared/Layouts/_Layout.cshtml";
+}
+
+@Html.PropertyFor(x => x.CurrentContent.Title);
+@Html.PropertyFor(x => x.CurrentContent.Blocks)
