@@ -1,24 +1,20 @@
 <script lang="ts">
+  import { onMount } from "svelte";
+  import type { ImagBlock } from "../../../../Interfaces/Frontend/Blocks";
+  import { __epiDataService } from "../../../../Services/Frontend/EpiDataService";
 
-import { onMount } from "svelte";
-import type { ImagBlock } from "../../../../Interfaces/Frontend/Blocks";
-import { __epiDataService } from "../../../../Services/Frontend/EpiDataService";
+  let data: any;
+  export let imageId: string;
 
-let data: any;
-export let imageId: string;
-
-const getData = async () => {
+  const getData = async () => {
     const response = await __epiDataService.GetContentById<ImagBlock>(imageId);
-    data = response.url
-}
+    data = response.url;
+  };
 
-onMount(getData)
-
+  onMount(getData);
 </script>
 
-<img src={data} alt="Bild">
-
+<img src={data} alt="Bild" />
 
 <style lang="scss">
-
 </style>

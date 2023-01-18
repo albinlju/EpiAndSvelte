@@ -3624,22 +3624,22 @@ var tabblock = (function () {
     function create_if_block(ctx) {
     	let ul;
     	let li0;
-    	let a0;
+    	let button0;
     	let t0_value = /*data*/ ctx[0].tabOneText.value + "";
     	let t0;
-    	let a0_class_value;
+    	let button0_class_value;
     	let t1;
     	let li1;
-    	let a1;
+    	let button1;
     	let t2_value = /*data*/ ctx[0].tabTwoText.value + "";
     	let t2;
-    	let a1_class_value;
+    	let button1_class_value;
     	let t3;
     	let li2;
-    	let a2;
+    	let button2;
     	let t4_value = /*data*/ ctx[0].tabTwoText.value + "";
     	let t4;
-    	let a2_class_value;
+    	let button2_class_value;
     	let t5;
     	let div;
     	let t6;
@@ -3654,15 +3654,15 @@ var tabblock = (function () {
     		c: function create() {
     			ul = element("ul");
     			li0 = element("li");
-    			a0 = element("a");
+    			button0 = element("button");
     			t0 = text(t0_value);
     			t1 = space();
     			li1 = element("li");
-    			a1 = element("a");
+    			button1 = element("button");
     			t2 = text(t2_value);
     			t3 = space();
     			li2 = element("li");
-    			a2 = element("a");
+    			button2 = element("button");
     			t4 = text(t4_value);
     			t5 = space();
     			div = element("div");
@@ -3671,52 +3671,49 @@ var tabblock = (function () {
     			if (if_block1) if_block1.c();
     			t7 = space();
     			if (if_block2) if_block2.c();
-    			attr_dev(a0, "data-id", "1");
-    			attr_dev(a0, "href", "#tab-1");
+    			attr_dev(button0, "data-id", "1");
 
-    			attr_dev(a0, "class", a0_class_value = "flex justify-center " + (/*activeDescription*/ ctx[1] == 1
-    			? "bg-zinc-600 text-gray-400"
-    			: "") + " rounded-lg py-4 text-gray-400");
+    			attr_dev(button0, "class", button0_class_value = "flex justify-center w-full " + (/*activeDescription*/ ctx[1] == 1
+    			? 'bg-zinc-600 text-gray-100'
+    			: '') + " rounded-lg py-4 text-gray-400");
 
-    			add_location(a0, file, 22, 12, 751);
-    			add_location(li0, file, 21, 8, 733);
-    			attr_dev(a1, "data-id", "2");
-    			attr_dev(a1, "href", "#tab-2");
+    			add_location(button0, file, 24, 6, 730);
+    			add_location(li0, file, 23, 4, 718);
+    			attr_dev(button1, "data-id", "2");
 
-    			attr_dev(a1, "class", a1_class_value = "flex justify-center " + (/*activeDescription*/ ctx[1] == 2
-    			? "bg-zinc-600 text-gray-400"
-    			: "") + " rounded-lg shadow text-indigo-900 py-4");
+    			attr_dev(button1, "class", button1_class_value = "flex justify-center w-full " + (/*activeDescription*/ ctx[1] == 2
+    			? 'bg-zinc-600 text-gray-100'
+    			: '') + " rounded-lg text-gray-400 py-4");
 
-    			add_location(a1, file, 25, 12, 1003);
-    			add_location(li1, file, 24, 8, 985);
-    			attr_dev(a2, "data-id", "3");
-    			attr_dev(a2, "href", "#tab-3");
+    			add_location(button1, file, 34, 6, 1038);
+    			add_location(li1, file, 33, 4, 1026);
+    			attr_dev(button2, "data-id", "3");
 
-    			attr_dev(a2, "class", a2_class_value = "flex justify-center " + (/*activeDescription*/ ctx[1] == 3
-    			? "bg-zinc-600 text-gray-400"
-    			: "") + " rounded-lg text-gray-400 py-4");
+    			attr_dev(button2, "class", button2_class_value = "flex justify-center w-full " + (/*activeDescription*/ ctx[1] == 3
+    			? 'bg-zinc-600 text-gray-100'
+    			: '') + " rounded-lg text-gray-400 py-4");
 
-    			add_location(a2, file, 28, 12, 1264);
-    			add_location(li2, file, 27, 8, 1246);
+    			add_location(button2, file, 44, 6, 1346);
+    			add_location(li2, file, 43, 4, 1334);
     			attr_dev(ul, "class", "grid grid-flow-col text-center text-gray-500 bg-zinc-800 rounded-lg p-1 mb-4");
-    			add_location(ul, file, 20, 4, 634);
+    			add_location(ul, file, 20, 2, 614);
     			attr_dev(div, "class", "tab-content");
     			attr_dev(div, "id", "tabs-tabContentFill");
-    			add_location(div, file, 31, 4, 1505);
+    			add_location(div, file, 54, 2, 1649);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, ul, anchor);
     			append_dev(ul, li0);
-    			append_dev(li0, a0);
-    			append_dev(a0, t0);
+    			append_dev(li0, button0);
+    			append_dev(button0, t0);
     			append_dev(ul, t1);
     			append_dev(ul, li1);
-    			append_dev(li1, a1);
-    			append_dev(a1, t2);
+    			append_dev(li1, button1);
+    			append_dev(button1, t2);
     			append_dev(ul, t3);
     			append_dev(ul, li2);
-    			append_dev(li2, a2);
-    			append_dev(a2, t4);
+    			append_dev(li2, button2);
+    			append_dev(button2, t4);
     			insert_dev(target, t5, anchor);
     			insert_dev(target, div, anchor);
     			if (if_block0) if_block0.m(div, null);
@@ -3727,9 +3724,9 @@ var tabblock = (function () {
 
     			if (!mounted) {
     				dispose = [
-    					listen_dev(a0, "click", /*changeActiveDescription*/ ctx[2], false, false, false),
-    					listen_dev(a1, "click", /*changeActiveDescription*/ ctx[2], false, false, false),
-    					listen_dev(a2, "click", /*changeActiveDescription*/ ctx[2], false, false, false)
+    					listen_dev(button0, "click", /*changeActiveDescription*/ ctx[2], false, false, false),
+    					listen_dev(button1, "click", /*changeActiveDescription*/ ctx[2], false, false, false),
+    					listen_dev(button2, "click", /*changeActiveDescription*/ ctx[2], false, false, false)
     				];
 
     				mounted = true;
@@ -3738,26 +3735,26 @@ var tabblock = (function () {
     		p: function update(ctx, dirty) {
     			if (dirty & /*data*/ 1 && t0_value !== (t0_value = /*data*/ ctx[0].tabOneText.value + "")) set_data_dev(t0, t0_value);
 
-    			if (dirty & /*activeDescription*/ 2 && a0_class_value !== (a0_class_value = "flex justify-center " + (/*activeDescription*/ ctx[1] == 1
-    			? "bg-zinc-600 text-gray-400"
-    			: "") + " rounded-lg py-4 text-gray-400")) {
-    				attr_dev(a0, "class", a0_class_value);
+    			if (dirty & /*activeDescription*/ 2 && button0_class_value !== (button0_class_value = "flex justify-center w-full " + (/*activeDescription*/ ctx[1] == 1
+    			? 'bg-zinc-600 text-gray-100'
+    			: '') + " rounded-lg py-4 text-gray-400")) {
+    				attr_dev(button0, "class", button0_class_value);
     			}
 
     			if (dirty & /*data*/ 1 && t2_value !== (t2_value = /*data*/ ctx[0].tabTwoText.value + "")) set_data_dev(t2, t2_value);
 
-    			if (dirty & /*activeDescription*/ 2 && a1_class_value !== (a1_class_value = "flex justify-center " + (/*activeDescription*/ ctx[1] == 2
-    			? "bg-zinc-600 text-gray-400"
-    			: "") + " rounded-lg shadow text-indigo-900 py-4")) {
-    				attr_dev(a1, "class", a1_class_value);
+    			if (dirty & /*activeDescription*/ 2 && button1_class_value !== (button1_class_value = "flex justify-center w-full " + (/*activeDescription*/ ctx[1] == 2
+    			? 'bg-zinc-600 text-gray-100'
+    			: '') + " rounded-lg text-gray-400 py-4")) {
+    				attr_dev(button1, "class", button1_class_value);
     			}
 
     			if (dirty & /*data*/ 1 && t4_value !== (t4_value = /*data*/ ctx[0].tabTwoText.value + "")) set_data_dev(t4, t4_value);
 
-    			if (dirty & /*activeDescription*/ 2 && a2_class_value !== (a2_class_value = "flex justify-center " + (/*activeDescription*/ ctx[1] == 3
-    			? "bg-zinc-600 text-gray-400"
-    			: "") + " rounded-lg text-gray-400 py-4")) {
-    				attr_dev(a2, "class", a2_class_value);
+    			if (dirty & /*activeDescription*/ 2 && button2_class_value !== (button2_class_value = "flex justify-center w-full " + (/*activeDescription*/ ctx[1] == 3
+    			? 'bg-zinc-600 text-gray-100'
+    			: '') + " rounded-lg text-gray-400 py-4")) {
+    				attr_dev(button2, "class", button2_class_value);
     			}
 
     			if (/*activeDescription*/ ctx[1] == 1) {
@@ -3822,7 +3819,7 @@ var tabblock = (function () {
     	return block;
     }
 
-    // (33:8) {#if activeDescription == 1}
+    // (56:4) {#if activeDescription == 1}
     function create_if_block_3(ctx) {
     	let div1;
     	let div0;
@@ -3833,12 +3830,12 @@ var tabblock = (function () {
     		c: function create() {
     			div1 = element("div");
     			div0 = element("div");
-    			add_location(div0, file, 34, 12, 1761);
-    			attr_dev(div1, "class", div1_class_value = "tab-pane fade " + (/*activeDescription*/ ctx[1] == 1 ? "active show" : ""));
+    			add_location(div0, file, 62, 8, 1939);
+    			attr_dev(div1, "class", div1_class_value = "tab-pane fade " + (/*activeDescription*/ ctx[1] == 1 ? 'active show' : ''));
     			attr_dev(div1, "id", "tabs-homeFill");
     			attr_dev(div1, "role", "tabpanel");
     			attr_dev(div1, "aria-labelledby", "tabs-home-tabFill");
-    			add_location(div1, file, 33, 8, 1603);
+    			add_location(div1, file, 56, 6, 1741);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3847,7 +3844,7 @@ var tabblock = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*data*/ 1 && raw_value !== (raw_value = /*data*/ ctx[0].tabThreeDescription.value + "")) div0.innerHTML = raw_value;
-    			if (dirty & /*activeDescription*/ 2 && div1_class_value !== (div1_class_value = "tab-pane fade " + (/*activeDescription*/ ctx[1] == 1 ? "active show" : ""))) {
+    			if (dirty & /*activeDescription*/ 2 && div1_class_value !== (div1_class_value = "tab-pane fade " + (/*activeDescription*/ ctx[1] == 1 ? 'active show' : ''))) {
     				attr_dev(div1, "class", div1_class_value);
     			}
     		},
@@ -3860,14 +3857,14 @@ var tabblock = (function () {
     		block,
     		id: create_if_block_3.name,
     		type: "if",
-    		source: "(33:8) {#if activeDescription == 1}",
+    		source: "(56:4) {#if activeDescription == 1}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (39:8) {#if activeDescription == 2}
+    // (67:4) {#if activeDescription == 2}
     function create_if_block_2(ctx) {
     	let div1;
     	let div0;
@@ -3878,12 +3875,12 @@ var tabblock = (function () {
     		c: function create() {
     			div1 = element("div");
     			div0 = element("div");
-    			add_location(div0, file, 40, 12, 2055);
-    			attr_dev(div1, "class", div1_class_value = "tab-pane fade " + (/*activeDescription*/ ctx[1] == 2 ? "active show" : ""));
+    			add_location(div0, file, 73, 8, 2261);
+    			attr_dev(div1, "class", div1_class_value = "tab-pane fade " + (/*activeDescription*/ ctx[1] == 2 ? 'active show' : ''));
     			attr_dev(div1, "id", "tabs-profileFill");
     			attr_dev(div1, "role", "tabpanel");
     			attr_dev(div1, "aria-labelledby", "tabs-profile-tabFill");
-    			add_location(div1, file, 39, 8, 1891);
+    			add_location(div1, file, 67, 6, 2057);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div1, anchor);
@@ -3892,7 +3889,7 @@ var tabblock = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*data*/ 1 && raw_value !== (raw_value = /*data*/ ctx[0].tabTwoDescription.value + "")) div0.innerHTML = raw_value;
-    			if (dirty & /*activeDescription*/ 2 && div1_class_value !== (div1_class_value = "tab-pane fade " + (/*activeDescription*/ ctx[1] == 2 ? "active show" : ""))) {
+    			if (dirty & /*activeDescription*/ 2 && div1_class_value !== (div1_class_value = "tab-pane fade " + (/*activeDescription*/ ctx[1] == 2 ? 'active show' : ''))) {
     				attr_dev(div1, "class", div1_class_value);
     			}
     		},
@@ -3905,14 +3902,14 @@ var tabblock = (function () {
     		block,
     		id: create_if_block_2.name,
     		type: "if",
-    		source: "(39:8) {#if activeDescription == 2}",
+    		source: "(67:4) {#if activeDescription == 2}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (45:8) {#if activeDescription == 3}
+    // (78:4) {#if activeDescription == 3}
     function create_if_block_1(ctx) {
     	let div;
     	let raw_value = /*data*/ ctx[0].tabOneDescription.value + "";
@@ -3921,11 +3918,11 @@ var tabblock = (function () {
     	const block = {
     		c: function create() {
     			div = element("div");
-    			attr_dev(div, "class", div_class_value = "tab-pane fade " + (/*activeDescription*/ ctx[1] == 3 ? "active show" : ""));
+    			attr_dev(div, "class", div_class_value = "tab-pane fade " + (/*activeDescription*/ ctx[1] == 3 ? 'active show' : ''));
     			attr_dev(div, "id", "tabs-messagesFill");
     			attr_dev(div, "role", "tabpanel");
     			attr_dev(div, "aria-labelledby", "tabs-profile-tabFill");
-    			add_location(div, file, 45, 12, 2195);
+    			add_location(div, file, 78, 6, 2377);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, div, anchor);
@@ -3933,7 +3930,7 @@ var tabblock = (function () {
     		},
     		p: function update(ctx, dirty) {
     			if (dirty & /*data*/ 1 && raw_value !== (raw_value = /*data*/ ctx[0].tabOneDescription.value + "")) div.innerHTML = raw_value;
-    			if (dirty & /*activeDescription*/ 2 && div_class_value !== (div_class_value = "tab-pane fade " + (/*activeDescription*/ ctx[1] == 3 ? "active show" : ""))) {
+    			if (dirty & /*activeDescription*/ 2 && div_class_value !== (div_class_value = "tab-pane fade " + (/*activeDescription*/ ctx[1] == 3 ? 'active show' : ''))) {
     				attr_dev(div, "class", div_class_value);
     			}
     		},
@@ -3946,7 +3943,7 @@ var tabblock = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(45:8) {#if activeDescription == 3}",
+    		source: "(78:4) {#if activeDescription == 3}",
     		ctx
     	});
 
@@ -4012,15 +4009,13 @@ var tabblock = (function () {
     	};
 
     	const changeActiveDescription = event => {
-    		event.target;
+    		const target = event.target;
 
-    		if (!(event.target instanceof HTMLAnchorElement)) {
+    		if (!(target instanceof HTMLButtonElement)) {
     			return;
     		}
 
-    		$$invalidate(1, activeDescription = event.target.dataset.id
-    		? JSON.parse(event.target.dataset.id)
-    		: "");
+    		$$invalidate(1, activeDescription = target.dataset.id ? JSON.parse(target.dataset.id) : "");
     	};
 
     	let data;
