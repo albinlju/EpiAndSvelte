@@ -5,7 +5,7 @@ import { __serviceHelper } from "./ServiceHelper";
 class EpiDataService {
     
     constructor(){
-        __serviceHelper.init("https://localhost:5000/api/episerver/v3.0/");
+        __serviceHelper.init("/api/episerver/v3.0/");
     }
 
     GetContentById = async <T extends ContentData>(id: string):Promise<T> => {

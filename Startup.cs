@@ -1,3 +1,4 @@
+using Baaijte.Optimizely.ImageSharp.Web;
 using EPiServer.Cms.Shell;
 using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Scheduler;
@@ -25,7 +26,7 @@ public class Startup
         }
 
         services.AddRazorPages().WithRazorPagesRoot("/Models/Pages");
-     
+        services.AddBaaijteOptimizelyImageSharp();
 
         services
             .AddCmsAspNetIdentity<ApplicationUser>()
@@ -49,6 +50,7 @@ public class Startup
         app.UseRouting();
         app.UseAuthentication();
         app.UseAuthorization();
+        app.UseBaaijteOptimizelyImageSharp();
 
         app.UseEndpoints(endpoints =>
         {

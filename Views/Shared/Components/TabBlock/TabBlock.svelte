@@ -95,10 +95,6 @@
       </div>
     {/if}
   </div>
-{:else}
-  <div class="flex justify-center items-center p-20">
-    <Spinner />
-  </div>
 {/if}
 
 <style lang="scss">
