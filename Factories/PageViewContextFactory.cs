@@ -2,8 +2,8 @@
 using EPiServer.ServiceLocation;
 using EPiServer.Web;
 using EPiServer.Web.Routing;
-using EpiSvelte.Models.Layout;
-using EpiSvelte.Models.Pages;
+using EpiSvelte.Features.Layout;
+using EpiSvelte.Features.Pages;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Html;
 using Microsoft.AspNetCore.Identity;

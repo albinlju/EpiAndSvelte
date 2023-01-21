@@ -1,0 +1,12 @@
+@using EpiSvelte.Extensions;
+@model EpiSvelte.Features.Blocks.TabBlock;
+
+<div>
+    <div data-id="@(((IContent)Model).ContentLink.ID)" id="tabBlock">
+        <partial name="_TabPlaceholder" />
+    </div>
+</div>
+
+@{
+    Html.AddJavaScript("/build/tabblock.js");
+}

@@ -1,7 +1,16 @@
 {
   "extends": "@tsconfig/svelte/tsconfig.json",
 
-  "include": [ "Models/Pages/*", "Models/Pages/**/*", "Views/Shared/Components/**/*", "Views/Shared/Components/*" ],
+  "include": [ 
+    "Features/Episerver/Pages/*", 
+    "Features/Episerver/Pages/**/*",
+    "Features/Episerver/Components/*", 
+    "Features/Episerver/Components/**/*",
+    "Features/MVC/*", 
+    "Features/MVC/**/*",
+    "Views/Shared/SvelteComponents/*",  
+    "Views/Shared/SvelteComponents/**/*" 
+  ],
   "exclude": ["node_modules/*", "__sapper__/*", "public/*", "wwwroot/*", "bin/*", "obj/*", "Properties/*", ".vscode/*"],
 
   "compilerOptions": {

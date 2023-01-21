@@ -1,0 +1,9 @@
+@using EPiServer.Web.Mvc.Html;
+@using EpiSvelte.Extensions;
+@model EpiSvelte.Features.Blocks.ImageBlock;
+
+<div data-id="@Model.Image.ID" id="imageBlock"></div>
+
+@{
+    Html.AddJavaScript("/build/imageblock.js");
+}

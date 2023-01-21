@@ -43,7 +43,7 @@ const getAllConfigs = function (dir, result) {
 
     return result;
 }
-const configs = getAllConfigs("./Models/Pages")
+const configs = getAllConfigs("./Features/Episerver/Pages")
 const config = configs[page];
 if (!config) {
     console.error(`ERROR: Could not find page '${page}'`);

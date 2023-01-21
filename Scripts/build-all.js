@@ -67,13 +67,18 @@ if (!fs.existsSync(build)) {
 
 promises.push(exec(`npm run fe-scss-build`));
 
-for (let pageConfigs of getAllConfigs("./Models/Pages")) {
+for (let pageConfigs of getAllConfigs("./Features/Episerver/Pages")) {
     promises.push(exec("npx rollup -c " + pageConfigs + " --bundleConfigAsCjs"));
 }
 
-for(let blockConfigs of getAllConfigs("./Views/Shared/Components")){
+for(let blockConfigs of getAllConfigs("./Features/Episerver/Components")){
     promises.push(exec("npx rollup -c " + blockConfigs + " --bundleConfigAsCjs"));
 }
+
+for(let blockConfigs of getAllConfigs("./Features/MVC/Components")){
+    promises.push(exec("npx rollup -c " + blockConfigs + " --bundleConfigAsCjs"));
+}
+
 
 promises.push(removeMaps(root));
 promises.push(removeMaps(build));

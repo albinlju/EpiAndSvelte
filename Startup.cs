@@ -4,6 +4,8 @@ using EPiServer.Cms.UI.AspNetIdentity;
 using EPiServer.Scheduler;
 using EPiServer.ServiceLocation;
 using EPiServer.Web.Routing;
+using EpiSvelte.Extensions;
+using Microsoft.AspNetCore.Mvc.Razor;
 
 namespace EpiSvelte;
 
@@ -25,7 +27,11 @@ public class Startup
             services.Configure<SchedulerOptions>(options => options.Enabled = false);
         }
 
-        services.AddRazorPages().WithRazorPagesRoot("/Models/Pages");
+        services.AddRazorPages().WithRazorPagesRoot("/Features/Episerver").AddRazorOptions(options =>
+        {
+            options.ViewLocationExpanders.Add(new ViewLocationExpander());
+        });
+
         services.AddBaaijteOptimizelyImageSharp();
 
         services
@@ -33,7 +39,6 @@ public class Startup
             .AddCms()
             .AddAdminUserRegistration()
             .AddEmbeddedLocalization<Startup>();
-
 
         services.AddContentDeliveryApi();
 

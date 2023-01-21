@@ -34,6 +34,7 @@ export default (param, globals) => {
         cssOutput = param.cssOutput ? param.cssOutput : name + ".css";
     }
     globals = globals || {};
+    console.log(production);
     return {
         input: input,
         output: {

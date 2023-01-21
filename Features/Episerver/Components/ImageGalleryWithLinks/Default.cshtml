@@ -1,0 +1,23 @@
+@using EPiServer.Web.Mvc.Html;
+@using EpiSvelte.Extensions;
+@model EpiSvelte.Features.Blocks.ImageGalleryWithLinks;
+
+<div class="flex mb-10">
+    <div class="flex-1 pr-10">
+        @for (var x = 0; x < Model.Links.Count(); x++)
+        {
+            <div
+            class="p-16 @(x + 1 != 2 ? "ml-20" : "w-11/12") bg-zinc-800 shadow-xl @(Model.Links.Last() == Model.Links[x] ? "" : "mb-10") rounded-xl">
+                <a>@Model.Links[x].Title</a>
+            </div>
+        }
+    </div>
+    <div class="flex-1 pl-10 imageGallery">
+        @for (var i = 0; i < Model.Images.Count(); i++)
+        {
+            <div class="area-@(i)">
+                <img class="rounded-xl object-cover w-full h-full" src="@Url.ContentUrl(Model.Images[i])" />
+            </div>
+        }
+    </div>
+</div>

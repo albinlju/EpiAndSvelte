@@ -3,7 +3,7 @@ using EPiServer.Framework.Initialization;
 using EPiServer.Security;
 using EPiServer.ServiceLocation;
 using EPiServer.Web;
-using EpiSvelte.Models.Pages;
+using EpiSvelte.Features.Pages;
 
 namespace EpiSvelte.Initialization
 {

@@ -50,12 +50,16 @@ if (!fs.existsSync(build)) {
 
 promises.push(exec(`npm run fe-scss-watch`));
 
-for (let config of getAllConfigs("./Models/Pages")) {
-    promises.push(exec("npx rollup -c " + config + " -w --bundleConfigAsCjs"));
+for (let pageConfigs of getAllConfigs("./Features/Episerver/Pages")) {
+    promises.push(exec("npx rollup -c " + pageConfigs + " --bundleConfigAsCjs"));
 }
 
-for (let config of getAllConfigs("./Views/Shared/Components")) {
-    promises.push(exec("npx rollup -c " + config + " -w --bundleConfigAsCjs"));
+for(let blockConfigs of getAllConfigs("./Features/Episerver/Components")){
+    promises.push(exec("npx rollup -c " + blockConfigs + " --bundleConfigAsCjs"));
+}
+
+for(let blockConfigs of getAllConfigs("./Features/MVC/Components")){
+    promises.push(exec("npx rollup -c " + blockConfigs + " --bundleConfigAsCjs"));
 }
 
 console.log("Watching all...");
