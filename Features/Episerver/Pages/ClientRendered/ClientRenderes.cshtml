@@ -1,0 +1,21 @@
+@page
+@model EpiSvelte.Features.Pages.ClientRenderedModel
+
+@{
+    Layout = "~/Features/MVC/Layouts/_Layout.cshtml";
+}
+
+<div id="root" data-id="@Model.CurrentContent.ContentGuid">
+    <div id="clientRenderedSpinner">
+        @{
+            Html.RenderPartial("_Spinner");
+        }
+    </div>
+</div>
+
+
+
+@section HeadSection {
+<link href="~/build/clientrendered.css" asp-append-version="true" rel="stylesheet" />
+<script defer src="~/build/clientrendered.js" asp-append-version="true"></script>
+}

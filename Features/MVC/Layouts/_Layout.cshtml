@@ -14,10 +14,16 @@
 </head>
 
 <body class="bg-zinc-900">
-    @await Component.InvokeAsync("Header")
-    <div class="container">
+    
+    <cache expires-after="@TimeSpan.FromMinutes(5)">
+        @await Component.InvokeAsync("Header")
+    </cache>
+ 
+    <div class="container m-auto">
         @RenderBody()
     </div>
+   
+    
 </body>
 
 </html>

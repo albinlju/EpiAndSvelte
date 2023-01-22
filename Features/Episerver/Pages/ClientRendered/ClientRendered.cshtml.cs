@@ -5,9 +5,9 @@ using EpiSvelte.Model.ViewFeatures;
 
 namespace EpiSvelte.Features.Pages;
 
-public class LandingPageModel : RazorPageModel<LandingPage>, IPageViewModel<LandingPage>
+public class ClientRenderedModel : RazorPageModel<ClientRendered>, IPageViewModel<ClientRendered>
 {
-    public LandingPage CurrentPage => CurrentContent;
+    public ClientRendered CurrentPage => CurrentContent;
 
     public LayoutModel Layout { get; set; }
     public IContent Content { get; set; }

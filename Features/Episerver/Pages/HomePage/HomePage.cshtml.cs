@@ -1,6 +1,6 @@
 using EPiServer.Web.Mvc;
 using EpiSvelte.Factories;
-using EpiSvelte.Features.Layout;
+using EpiSvelte.Features.Layouts;
 using EpiSvelte.Model.ViewFeatures;
 
 namespace EpiSvelte.Features.Pages;

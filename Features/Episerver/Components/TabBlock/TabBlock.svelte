@@ -2,10 +2,9 @@
   import { onMount } from "svelte";
   import type { TabBlock } from "./TabBlockType";
   import { __epiDataService } from "../../../../Services/Frontend/EpiDataService";
-  import Spinner from "../../../../Views/Shared/SvelteComponents/Spinner.svelte";
 
   const getData = async () => {
-    const response = await __epiDataService.GetContentById<TabBlock>(
+    const response = await __epiDataService.getContentById<TabBlock>(
       tabBlockId
     );
     data = response;

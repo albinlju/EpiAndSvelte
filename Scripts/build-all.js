@@ -79,6 +79,10 @@ for(let blockConfigs of getAllConfigs("./Features/MVC/Components")){
     promises.push(exec("npx rollup -c " + blockConfigs + " --bundleConfigAsCjs"));
 }
 
+for(let blockConfigs of getAllConfigs("./Features/Svelte")){
+    promises.push(exec("npx rollup -c " + blockConfigs + " --bundleConfigAsCjs"));
+}
+
 
 promises.push(removeMaps(root));
 promises.push(removeMaps(build));

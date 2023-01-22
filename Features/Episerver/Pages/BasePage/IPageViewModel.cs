@@ -1,4 +1,4 @@
-﻿using EpiSvelte.Features.Layout;
+﻿using EpiSvelte.Features.Layouts;
 
 namespace EpiSvelte.Model.ViewFeatures
 {

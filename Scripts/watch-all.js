@@ -54,11 +54,15 @@ for (let pageConfigs of getAllConfigs("./Features/Episerver/Pages")) {
     promises.push(exec("npx rollup -c " + pageConfigs + " --bundleConfigAsCjs"));
 }
 
-for(let blockConfigs of getAllConfigs("./Features/Episerver/Components")){
-    promises.push(exec("npx rollup -c " + blockConfigs + " --bundleConfigAsCjs"));
+for(let componentsConfigs of getAllConfigs("./Features/Episerver/Components")){
+    promises.push(exec("npx rollup -c " + componentsConfigs + " --bundleConfigAsCjs"));
 }
 
-for(let blockConfigs of getAllConfigs("./Features/MVC/Components")){
+for(let MVCComponetsConfigs of getAllConfigs("./Features/MVC/Components")){
+    promises.push(exec("npx rollup -c " + MVCComponetsConfigs + " --bundleConfigAsCjs"));
+}
+
+for(let blockConfigs of getAllConfigs("./Features/Svelte/Components")){
     promises.push(exec("npx rollup -c " + blockConfigs + " --bundleConfigAsCjs"));
 }
 

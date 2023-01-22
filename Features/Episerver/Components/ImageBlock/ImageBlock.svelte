@@ -7,7 +7,7 @@
   export let imageId: string;
 
   const getData = async () => {
-    const response = await __epiDataService.GetContentById<ImagBlock>(imageId);
+    const response = await __epiDataService.getContentById<ImagBlock>(imageId);
     data = response.url;
   };
 

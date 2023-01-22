@@ -25,6 +25,10 @@
         <Exec Command="npm run fe-scss-build" />
   </Target>
 
+  <ItemGroup>
+    <Watch Include="**\*.ts" Exclude="node_modules\**\*;**\*.js.map;obj\**\*;bin\**\*" />
+    <Watch Include="**\*.svelte" Exclude="node_modules\**\*;**\*.js.map;obj\**\*;bin\**\*" />
+  </ItemGroup>
    
   <ItemGroup>
     <EmbeddedResource Include="Resources\Translations\**\*" />

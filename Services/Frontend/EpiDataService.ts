@@ -8,9 +8,9 @@ class EpiDataService {
         __serviceHelper.init("/api/episerver/v3.0/");
     }
 
-    GetContentById = async <T extends ContentData>(id: string):Promise<T> => {
+    getContentById = async <T extends ContentData>(id: string, expanded?: boolean):Promise<T> => {
         try{
-            const response = await __serviceHelper.get<T>(`content/${id}`); 
+            const response = await __serviceHelper.get<T>(`content/${id}${expanded ? "?" + new URLSearchParams("expand=*") : ""}`); 
             return response
         }catch(error){
             throw new Error("Kunde inte hämta alla produkter");

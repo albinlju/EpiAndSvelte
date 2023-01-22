@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Html;
 
-namespace EpiSvelte.Features.Layout
+namespace EpiSvelte.Features.Layouts
 {
     public class LayoutModel
     {

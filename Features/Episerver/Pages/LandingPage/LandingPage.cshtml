@@ -2,9 +2,8 @@
 @using EPiServer.Web.Mvc.Html
 @model EpiSvelte.Features.Pages.LandingPageModel
 @{
-    Layout = "~/Views/Shared/Layouts/_Layout.cshtml";
+    Layout = "~/Features/MVC/Layouts/_Layout.cshtml";
 }
-
 
 <h1 class="text-4xl" @Html.EditAttributes(x => x.CurrentContent.Title)>@Model.CurrentContent.Title</h1>
 <p @Html.EditAttributes(x => x.CurrentContent.Intro)>@Model.CurrentContent.Intro</p>

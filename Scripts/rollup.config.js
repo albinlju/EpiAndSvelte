@@ -34,7 +34,7 @@ export default (param, globals) => {
         cssOutput = param.cssOutput ? param.cssOutput : name + ".css";
     }
     globals = globals || {};
-    console.log(production);
+    
     return {
         input: input,
         output: {
@@ -42,7 +42,8 @@ export default (param, globals) => {
             format: "iife",
             name: appObject,
             file: jsOutput,
-            globals: globals || {}
+            globals: globals || {},
+            inlineDynamicImports: true
         },
         plugins: [
             replace({
