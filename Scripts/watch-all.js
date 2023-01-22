@@ -51,19 +51,19 @@ if (!fs.existsSync(build)) {
 promises.push(exec(`npm run fe-scss-watch`));
 
 for (let pageConfigs of getAllConfigs("./Features/Episerver/Pages")) {
-    promises.push(exec("npx rollup -c " + pageConfigs + " --bundleConfigAsCjs"));
+    promises.push(exec("npx rollup -c " + pageConfigs + " -w --bundleConfigAsCjs"));
 }
 
 for(let componentsConfigs of getAllConfigs("./Features/Episerver/Components")){
-    promises.push(exec("npx rollup -c " + componentsConfigs + " --bundleConfigAsCjs"));
+    promises.push(exec("npx rollup -c " + componentsConfigs + " -w --bundleConfigAsCjs"));
 }
 
 for(let MVCComponetsConfigs of getAllConfigs("./Features/MVC/Components")){
-    promises.push(exec("npx rollup -c " + MVCComponetsConfigs + " --bundleConfigAsCjs"));
+    promises.push(exec("npx rollup -c " + MVCComponetsConfigs + " -w --bundleConfigAsCjs"));
 }
 
 for(let blockConfigs of getAllConfigs("./Features/Svelte/Components")){
-    promises.push(exec("npx rollup -c " + blockConfigs + " --bundleConfigAsCjs"));
+    promises.push(exec("npx rollup -c " + blockConfigs + " -w --bundleConfigAsCjs"));
 }
 
 console.log("Watching all...");

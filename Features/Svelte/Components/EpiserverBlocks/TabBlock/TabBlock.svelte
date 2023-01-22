@@ -1,13 +1,15 @@
 <script lang="ts">
   import { onMount } from "svelte";
-  import type { TabBlock } from "./TabBlockType";
-  import { __epiDataService } from "../../../../Services/Frontend/EpiDataService";
+  import type { ITabBlock } from "./ITabBlock";
+  import { __epiDataService } from "../../../../../Services/Frontend/EpiDataService";
+
+  let activeDescription = 1;
+  export let blockId: string;
+  export let blockData: ITabBlock | null = null;
 
   const getData = async () => {
-    const response = await __epiDataService.getContentById<TabBlock>(
-      tabBlockId
-    );
-    data = response;
+    const response = await __epiDataService.getContentById<ITabBlock>(blockId);
+    blockData = response;
   };
 
   const changeActiveDescription = (event: Event) => {
@@ -18,14 +20,12 @@
     activeDescription = target.dataset.id ? JSON.parse(target.dataset.id) : "";
   };
 
-  let data: TabBlock;
-  let activeDescription = 1;
-  export let tabBlockId: string;
-
-  onMount(getData);
+  if (blockId) {
+    onMount(getData);
+  }
 </script>
 
-{#if data}
+{#if blockData}
   <ul
     class="grid grid-flow-col text-center text-gray-500 bg-zinc-800 rounded-lg p-1 mb-4"
   >
@@ -34,9 +34,10 @@
         data-id="1"
         on:click={changeActiveDescription}
         class="flex justify-center w-full 
-        {activeDescription == 1
+          {activeDescription == 1
           ? 'bg-zinc-600 text-gray-100'
-          : ''} rounded-lg py-4 text-gray-400">{data.tabOneText.value}</button
+          : ''} rounded-lg py-4 text-gray-400"
+        >{blockData.tabOneText.value}</button
       >
     </li>
     <li>
@@ -44,9 +45,10 @@
         data-id="2"
         on:click={changeActiveDescription}
         class="flex justify-center w-full 
-        {activeDescription == 2
+          {activeDescription == 2
           ? 'bg-zinc-600 text-gray-100'
-          : ''} rounded-lg text-gray-400 py-4">{data.tabTwoText.value}</button
+          : ''} rounded-lg text-gray-400 py-4"
+        >{blockData.tabTwoText.value}</button
       >
     </li>
     <li>
@@ -54,9 +56,10 @@
         data-id="3"
         on:click={changeActiveDescription}
         class="flex justify-center w-full 
-        {activeDescription == 3
+          {activeDescription == 3
           ? 'bg-zinc-600 text-gray-100'
-          : ''} rounded-lg text-gray-400 py-4">{data.tabTwoText.value}</button
+          : ''} rounded-lg text-gray-400 py-4"
+        >{blockData.tabTwoText.value}</button
       >
     </li>
   </ul>
@@ -68,7 +71,7 @@
         role="tabpanel"
         aria-labelledby="tabs-home-tabFill"
       >
-        <div>{@html data.tabThreeDescription.value}</div>
+        <div>{@html blockData.tabThreeDescription.value}</div>
       </div>
     {/if}
 
@@ -79,7 +82,7 @@
         role="tabpanel"
         aria-labelledby="tabs-profile-tabFill"
       >
-        <div>{@html data.tabTwoDescription.value}</div>
+        <div>{@html blockData.tabTwoDescription.value}</div>
       </div>
     {/if}
 
@@ -90,7 +93,7 @@
         role="tabpanel"
         aria-labelledby="tabs-profile-tabFill"
       >
-        {@html data.tabOneDescription.value}
+        {@html blockData.tabOneDescription.value}
       </div>
     {/if}
   </div>
