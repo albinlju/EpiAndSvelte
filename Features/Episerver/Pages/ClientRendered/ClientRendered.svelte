@@ -21,8 +21,10 @@
 </script>
 
 {#if response}
+  <img alt="computer" src={response.topImage.value.url} class="mb-10" />
   <h1>{response.title.value}</h1>
   <p>{response.intro.value}</p>
+
   <BlockRenderer blocks={response.blocks.expandedValue} />
 {/if}
 

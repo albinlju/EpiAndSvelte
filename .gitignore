@@ -21,3 +21,6 @@ modules/
 thumbs.db
 ehthumbs.db
 desktop.ini
+
+# build
+wwwroot/build/

@@ -1,5 +1,6 @@
 @page
 @using EPiServer.Web.Mvc.Html
+@using Baaijte.Optimizely.ImageSharp.Web;
 @model EpiSvelte.Features.Pages.HomePageModel
 @{
     Layout = "~/Features/MVC/Layouts/_Layout.cshtml";
@@ -15,11 +16,13 @@
             get started!</a>
     </div>
     <div class="flex-1 z-10">
+
         <img class="rounded-3xl shadow" src="@Url.ContentUrl(Model.CurrentContent.TopImage)">
     </div>
     <div style="background-image: -webkit-linear-gradient(30deg, rgb(39 39 42) 50%, rgb(23 23 23) 50%)"
         class="absolute z-0 w-100 h-full"></div>
 </div>
+
 
 
 @Html.PropertyFor(x => x.CurrentContent.Blocks)

@@ -19,7 +19,7 @@
 </script>
 
 {#if blockData}
-  <img src={blockData.image.value.url} alt="Bild" />
+  <img class="mb-10" src={blockData.image.value.url} alt="Bild" />
 {/if}
 
 <style lang="scss">
